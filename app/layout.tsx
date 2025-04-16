@@ -1,5 +1,5 @@
 import type React from "react"
-import "./globals.css"
+import "@/styles/globals.css"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -18,9 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className} min-h-screen bg-background antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          {children}
+          <main className="relative flex min-h-screen flex-col">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
