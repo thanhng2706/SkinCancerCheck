@@ -1,5 +1,15 @@
 {
   "env": {
-    "NEXT_PUBLIC_API_URL": "https://your-backend-url.herokuapp.com"
+    "NEXT_PUBLIC_API_URL": "http://localhost:8000"
+  },
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_API_URL": "https://api.skincancercheck.com"
+    }
+  },
+  "git": {
+    "deploymentEnabled": {
+      "main": true
+    }
   }
 } 
